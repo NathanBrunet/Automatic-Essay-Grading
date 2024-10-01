@@ -121,20 +121,6 @@ def plot_correlation_with_target(df, target_column):
     
     # Display the heatmap
     plt.show()
-    
-# Clean essay text by removing special characters, digits, and converting to lowercase
-def clean_essay_new(essay):
-    """
-    Clean essay text by removing special characters, numbers, and converting to lowercase.
-    
-    :param essay: The essay text to clean
-    :return: The cleaned essay text
-    """
-    essay = re.sub(r'@\w+', '', essay)  # Removing special markers
-    essay = essay.lower()  # Converting to lowercase
-    essay = re.sub(r'[^\w\s]', '', essay)  # Removing punctuation
-    essay = re.sub(r'\d+', '', essay)  # Removing digits
-    return essay
 
 
 def qwk(y_true, y_pred):
